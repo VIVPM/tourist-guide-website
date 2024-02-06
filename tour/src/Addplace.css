@@ -1,0 +1,50 @@
+.Heading{
+    font-size:x-large;
+    float: left;
+}
+
+.Heading::after{
+    content: "\a";
+}
+
+.inputBox{
+    text-align: center;
+    position: relative;
+    float: left;
+    padding: 12px;
+    border-radius: 12px;
+}
+.inputBox::after{
+    content: "\a";
+}
+
+
+.btn {
+    background-color: #08d;
+    border-radius: 12px;
+    margin: auto;
+float: left;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    /* margin-top: 38px; */
+    text-align: center;
+    /* width: 100%; */
+    width: 90px;
+  }
+  
+  .btn:active {
+    background-color: #06b;
+  }
+
+
+  .searchBar{
+    text-align: center;
+  }
+
+  .btn::after{
+    content: "\a";
+}

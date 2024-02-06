@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.placelist{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5px;
+  
+}
+
+.header{
+  display: inline-flex;
+  margin-left: 60px;
+  margin-bottom: 10px;
+  text-align: center;
+  padding: auto;
+  list-style-type: none;
+  justify-content: space-between;
+}
+
+.user-space{
+  height: 300px;
+  width: 70%;
+  border-color: black;
+  font-size: small;
+  margin: 10px 10px 10px 10px;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap:100px
+}
+.usercontainer{
+  margin-left: 50px;
+  margin-right: 25px;
+  padding: 10 10 10 10;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 100;
+}
+.user-details{
+  background:#fff;
+  border-radius: 4px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgb(0,0,0,0,0.5);
+  margin-top: 10px;
+  background-color:darkturquoise;
+}
+
+.input{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+label, input{
+  display: block;
+}
+.form-button{
+  border: 0;
+  background: var(--primary);
+  color:#fff;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+footer{
+  margin-top:10em;
+}
+.middle-box{
+  display: inline-block;
+  justify-content: space-between;
+}
+.bottom{
+  margin-top: 0.3em;
+  margin-bottom: 0.6em;
+}

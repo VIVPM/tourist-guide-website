@@ -1,0 +1,1 @@
+Timing: 10AM – 5PM

@@ -1,0 +1,52 @@
+.desc{
+    text-align: center;
+    float: left;
+
+}
+
+ .aboutUs{
+    color: red;
+ }
+
+
+ /* .footer{
+    margin-top: 1rem;
+    padding: 1rem;
+    padding: 1rem;
+    background-color:cadetblue;
+    position: relative;
+    height: 50px;
+    bottom: 1px;
+    left: 0px;
+    width: 100%;
+    font-size: small;
+  } */
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(144, 233, 255);
+    color: black;
+    text-align: center;
+    padding: 10px;
+  }
+
+
+  .name{
+    bottom: 0px;
+    text-align: center;
+    float: center;
+  }
+
+ .email{
+    bottom: 0px;
+    text-align: center;
+float: right;
+
+}
+
+.email a{
+text-decoration: none;
+}
