@@ -65,6 +65,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+### Create New Dockerfile
+
+![Screenshot 2024-02-16 185609](https://github.com/VIVPM/tourist-guide-website/assets/116868237/d947f6c8-a287-426d-b5fa-cf1fe5221b6a)
+
+
 ### `Docker Deployment`
 
 <ol>
