@@ -1,0 +1,18 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    /* Adjusts the form's position */
+}
+
+.link {
+    text-decoration: none;
+    padding: 10px;
+    background-color: antiquewhite;
+    color: black;
+    border-radius: 12px;
+    margin-top: 20px;
+    /* Adds spacing between the links */
+}

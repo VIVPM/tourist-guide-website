@@ -1,0 +1,115 @@
+/* Container for the overall add review section */
+.add-review-container {
+  padding: 20px;
+  color: #eee;
+}
+
+/* Button to open the modal */
+.open-modal-button {
+  background-color: #08d;
+  border: none;
+  color: #eee;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.open-modal-button:hover {
+  background-color: #06b;
+}
+
+/* Modal overlay covering the screen */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Modal content container */
+.modal-content {
+  background-color: #15172b;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Button to close the modal */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  color: #eee;
+  cursor: pointer;
+}
+
+/* Input container styling (adjust as needed) */
+.input-container {
+  margin: 20px 0;
+}
+
+.input-container input,
+.input-container textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #303245;
+  color: #eee;
+  font-size: 16px;
+}
+
+/* Star rating container */
+.star {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+/* Submit button styling */
+.submit-button {
+  background-color: #08d;
+  border: none;
+  color: #eee;
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+
+  /* Add these properties */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submit-button:hover {
+  background-color: #06b;
+}
+
+/* Reviews section */
+.reviews-section {
+  margin-top: 30px;
+}
+
+/* Each review is shown in its own box */
+.review-box {
+  background-color: #303245;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
