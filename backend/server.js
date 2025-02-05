@@ -20,6 +20,7 @@ app.use(cors({ origin: true }));
 app.use(express.json())
 app.use('/api/places', projroutes)
 
+mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONG_URL)
     .then(()=>{
         app.listen(4000,()=>{
