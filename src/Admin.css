@@ -1,19 +1,39 @@
-.form {
+/* Center the navbar in the middle of the page */
+.navbar1 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    /* Adjusts the form's position */
+    height: 100vh;
+    /* Full screen height */
+    width: 100%;
 }
 
-.link {
-    display: flex;
-    text-decoration: none;
-    padding: 10px;
-    background-color: antiquewhite;
+/* Style for the links */
+.naav1 {
+    background-color: #ddd;
+    padding: 14px 16px;
+    border-radius: 6px;
+    border: 0;
+    box-sizing: border-box;
     color: black;
-    border-radius: 12px;
-    margin-top: 20px;
-    /* Adds spacing between the links */
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    /* Fixed width for the buttons */
+    margin: 10px;
+    /* Spacing between buttons */
+}
+
+/* Hover effect */
+.naav1:hover {
+    background-color: #111;
+    color: white;
+}
+
+/* Change active link color */
+.navbar1 a.active {
+    background-color: #08d;
+    color: white;
 }
