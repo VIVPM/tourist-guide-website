@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import Admin from './Admin'
 import './Adminspace.css'
-const Addplace = () => {
+const Adminspace = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState([]);
   const [password, setPassword] = useState([]);
@@ -41,4 +41,4 @@ const Addplace = () => {
     </div>
   );
 };
-export default Addplace;
+export default Adminspace;

@@ -3,7 +3,7 @@ import './Admin.css'
 const Admin=()=>{
     
     return(
-        <div >
+        <div>
             <div className="form">
                 <Link className="link" to='/Addplace'>Add a new place</Link>
                 <br/>
