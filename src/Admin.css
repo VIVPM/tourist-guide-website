@@ -8,6 +8,7 @@
 }
 
 .link {
+    display: flex;
     text-decoration: none;
     padding: 10px;
     background-color: antiquewhite;
