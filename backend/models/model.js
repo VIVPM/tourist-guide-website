@@ -24,4 +24,4 @@ const userSchema=new Schema({
 
 })
 
-module.exports=mongoose.model("tourist",userSchema);
+module.exports=mongoose.model("tourists",userSchema);

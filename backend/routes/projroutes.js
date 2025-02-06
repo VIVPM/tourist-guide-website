@@ -2,12 +2,12 @@
 const express = require("express");
 // const { find } = require("../models/model");
 const router = express.Router();
-const tourist = require("../models/model");
+const tourists = require("../models/model");
 const Place = require("../models/place");
 
 //get all users.
 router.get("/allusers", async (req, res) => {
-  const user = await tourist.find({});
+  const user = await tourists.find({});
   res.status(200).json(user);
   //res.json({ msg: "hello from get"})
 });
@@ -15,15 +15,23 @@ router.get("/allusers", async (req, res) => {
 //get only one user
 router.get("/getoneuser/:name", async (req, res) => {
   const { name } = req.params;
-  console.log(name);
-  const user = tourist.find({ Name: name }, function (err, docs) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("user found : ", user);
+  console.log("Searching for user:", name);
+
+  try {
+    const user = await tourists.find({ Name: name }); // Await the result of the query
+
+    if (user.length === 0) {
+      return res.status(404).json({ message: "User not found" });
     }
-  });
+
+    console.log("User found:", user);
+    res.status(200).json(user);
+  } catch (err) {
+    console.error("Error while fetching user:", err);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
+
 
 //get one place
 router.get("/getoneplace/:name", async (req, res) => {
@@ -75,7 +83,7 @@ router.post("/:name", async (req, res) => {
   const { name } = req.params;
 
   console.log(review);
-  const user = await tourist.findOne({ Name: name });
+  const user = await tourists.findOne({ Name: name });
   // Find the user and update their reviews
   if (!user) {
     return res.status(404).json({ error: "No such user exists" });
@@ -91,7 +99,7 @@ router.post("/:name", async (req, res) => {
 
     res.status(200).json(updatedPlace);
 
-    // const updatedUser = await tourist.findOne({ Name: name });
+    // const updatedUser = await tourists.findOne({ Name: name });
     // res.status(200).json(updatedUser);  // Send back the updated user with the reviews
   }
 });
@@ -102,7 +110,7 @@ router.post("/:name", async (req, res) => {
 router.patch("/:name", async (req, res) => {
   const { name } = req.body;
   console.log(name);
-  const user = await tourist.findOneAndUpdate(
+  const user = await tourists.findOneAndUpdate(
     { Name: name },
     {
       ...req.body,
@@ -126,7 +134,7 @@ router.post("/adduser/hello", async (req, res) => {
   }
 
   // Create a new user object
-  const user = new tourist({
+  const user = new tourists({
     Name: name,
     Password: pass,
     Phone: phone,
@@ -149,7 +157,7 @@ router.post("/adduser/hello", async (req, res) => {
 router.delete("/:name", async (req, res) => {
   const { name } = req.params;
   console.log(name);
-  const user = await tourist.findOneAndDelete({ Name: name });
+  const user = await tourists.findOneAndDelete({ Name: name });
   if (!user) {
     return res.status(404).json({ error: "no such user" });
   } else {
