@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import "./Addplace.css";
+
 const Addplace = () => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
@@ -7,6 +9,8 @@ const Addplace = () => {
   const [desc, setDesc] = useState("");
   const [review, setReview] = useState("");
   const [type, setType] = useState("");
+  const navigate = useNavigate(); // Initialize the navigate function
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -28,6 +32,10 @@ const Addplace = () => {
       }
 
       console.log("Place added successfully:", json);
+
+      // Alert and redirect to /places
+      alert("Place added successfully!");
+      navigate("/places"); // Redirect to /places
     } catch (error) {
       console.error("Fetch error:", error);
     }

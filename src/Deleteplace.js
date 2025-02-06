@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 import './Addplace.css';
 
 const Deleteplace = () => {
-    const [place, setPlace] = useState("");  // Fix: Use an empty string
-    const [error, setError] = useState("");  // Fix: Properly store errors
+    const [place, setPlace] = useState(""); // Store the name of the place to delete
+    const [error, setError] = useState(""); // Store error messages
+    const navigate = useNavigate(); // Initialize the navigate function
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -11,7 +13,7 @@ const Deleteplace = () => {
 
         try {
             const response = await fetch(`https://tourist-guide-website.onrender.com/api/places/deleteoneplace/${place}`, {
-                method: 'DELETE'
+                method: 'DELETE',
             });
 
             const text = await response.text(); // Read response as text
@@ -21,8 +23,10 @@ const Deleteplace = () => {
                 console.error("Error:", text);
             } else {
                 console.log("Success:", text);
+                alert("Place deleted successfully!"); // Show success message
                 setPlace(""); // Clear input field
                 setError(""); // Clear error message
+                navigate("/places"); // Redirect to /places
             }
         } catch (err) {
             console.error("Fetch error:", err);
@@ -44,7 +48,7 @@ const Deleteplace = () => {
                 />
                 <br /><br /><br />
                 <button className="btn" type="submit">Submit</button>
-                {error && <p className="error">{error}</p>}  {/* Display error messages */}
+                {error && <p className="error">{error}</p>} {/* Display error messages */}
                 <br /><br /><br /><br /><br /><br />
             </form>
         </div>
