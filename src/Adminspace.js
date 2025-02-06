@@ -12,7 +12,7 @@ const Addplace = () => {
       <h2>Wrong User name or password</h2>
       navigate("/");
     } else {
-      navigate("/admin")
+      navigate("/Admin")
     }
   };
   return (
