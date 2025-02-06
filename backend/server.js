@@ -20,6 +20,10 @@ app.use(cors({ origin: true }));
 app.use(express.json())
 app.use('/api/places', projroutes)
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONG_URL)
     .then(()=>{
