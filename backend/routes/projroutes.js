@@ -92,7 +92,7 @@ router.post("/:name", async (req, res) => {
     
     await Place.updateOne(
       { Name: place },
-      { $push: { Review: review,Rating:rating } }  // Push the new review into the Review array
+      { $push: { Review: review, Rating:rating } }  // Push the new review into the Review array
     );
 
     const updatedPlace = await Place.findOne({ Name: place });

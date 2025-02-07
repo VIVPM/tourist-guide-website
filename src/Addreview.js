@@ -225,7 +225,7 @@ const Addreview = () => {
 
     const response = await fetch(`https://tourist-guide-website.onrender.com/api/places/${name}`, {
       method: "POST",
-      body: JSON.stringify({ review, rating: currentValue }),
+      body: JSON.stringify({ place,review, rating: currentValue }),
       headers: { "Content-Type": "application/json" },
     });
 
