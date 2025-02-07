@@ -10,7 +10,7 @@ import CardDetails from './Card1';
 import Temp from './Temp';
 
 import Home from './Home';
-import Footer from './Footer';
+// import Footer from './Footer';
 import Searchbar from './Searchbar'
 import Adminspace from './Adminspace'
 import Admin from './Admin'
@@ -48,7 +48,6 @@ function App() {
       <Route path='/dict' element={<Dict/>}></Route>
     </Routes>
     </BrowserRouter>
-    <Footer/>
   </>
   );
 }

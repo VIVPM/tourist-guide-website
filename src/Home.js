@@ -2,7 +2,8 @@
 // import { Link } from 'react-router-dom';
 import './App.css';
 import './Home.css';
-import Bck from './bckgrnd.jpg'
+import Bck from './bckgrnd.jpg';
+import Footer from './Footer';
 function Home() {
    return (
       <div className='full'>
@@ -19,6 +20,7 @@ function Home() {
          <p className='para'>HEAD TO PLACES FOR TRAVEL OPTIONS</p>
          <br /><br /><br />
          </article>
+         <Footer />
       </div>
    )
 }
