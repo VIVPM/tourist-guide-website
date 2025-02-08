@@ -3,12 +3,30 @@
   padding: 20px;
   color: #eee;
 }
+/* Close button styling */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.close-button:hover {
+  transform: scale(1.2);
+  color: #FFD700;
+  /* Matching the star color for a cohesive look */
+}
 
 /* Button to open the modal */
 .open-modal-button {
-  background-color: #08d;
+  background-color: #eee;
   border: none;
-  color: #752e2e;
+  color: #f0b1b1;
   padding: 10px 20px;
   border-radius: 12px;
   cursor: pointer;
@@ -36,7 +54,7 @@
 
 /* Modal content container */
 .modal-content {
-  background-color: #15172b;
+  background-color: #bbbdd0;
   padding: 20px;
   border-radius: 10px;
   width: 90%;
@@ -68,7 +86,7 @@
   border-radius: 8px;
   border: none;
   box-sizing: border-box;
-  background-color: #303245;
+  background-color: #abb3ff;
   color: #eee;
   font-size: 16px;
 }

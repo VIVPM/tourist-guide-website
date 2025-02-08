@@ -29,7 +29,7 @@ function KitchenSinkExample(props) {
             <ListGroup className="list-group-flush">
               <ListGroup.Item>Location: {place.Location}</ListGroup.Item>
               <ListGroup.Item>
-                Average Rating: {calculateAverageRating(place.Rating)}
+                Average Rating: {calculateAverageRating(place.Rating)}/5.0
               </ListGroup.Item>
             </ListGroup>
             <br/>

@@ -96,7 +96,7 @@ const CardDetails = () => {
         data.Review.map((review, index) => (
           <div key={index} className="review-box">
             <h2 className="desc">Review: {review}</h2>
-            <h2 className="desc">Rating: {data.Rating[index] || "No rating provided"}</h2>
+            <h2 className="desc">Rating: {data.Rating[index] || "No rating provided"}/5</h2>
           </div>
         ))
       ) : (
